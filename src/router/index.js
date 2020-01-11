@@ -47,8 +47,8 @@ const router = new Router({
 router.beforeEach((to, from, next) => {
   // 登录验证
   if (isLoginRequired(to.name) && !store.state.logined) {
-    next({ path: '/login' })
-    return
+    //next({ path: '/login' })
+    //return
   }
 
   // TODO: tab 模式重复点击验证
@@ -62,8 +62,8 @@ router.beforeEach((to, from, next) => {
         dangerouslyUseHTMLString: true,
         message: '<strong class="my-notify">您无此页面的权限哟</strong>',
       })
-      next({ path: '/about' })
-      return
+      //next({ path: '/about' })
+      //return
     }
   }
 
